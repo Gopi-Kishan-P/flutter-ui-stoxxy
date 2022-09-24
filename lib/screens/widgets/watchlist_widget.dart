@@ -2,6 +2,7 @@ import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:ui_assignment/widgets/circular_icon.dart';
 
 class WatchlistWidget extends StatelessWidget {
   WatchlistWidget({super.key});
@@ -48,16 +49,7 @@ class WatchlistWidget extends StatelessWidget {
                 child: Column(children: [
                   Row(
                     children: [
-                      CircleAvatar(
-                        backgroundColor: Colors.grey.shade200,
-                        child: Padding(
-                          padding: const EdgeInsets.all(12),
-                          child: SvgPicture.asset(
-                            stock['image']!,
-                            color: Theme.of(context).colorScheme.secondary,
-                          ),
-                        ),
-                      ),
+                      circularIcon(context, stock['image']!),
                       const SizedBox(width: 8),
                       Expanded(
                         child: Column(
